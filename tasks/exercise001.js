@@ -8,6 +8,25 @@
 function singles(arr){
     if (arr === undefined) throw new Error("array is required");
     // Your code here!
+
+    let newArr = [];
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        num = arr[i];
+        let numPos = -1;
+        let count = 0;
+        while ((numPos = arr.indexOf(num, numPos +1)) != -1) {
+            count++;
+            if (count >= 2) {
+                break;
+            }
+        }
+        if (count < 2) {
+            newArr.push(num);
+        }
+    }
+    sum = newArr.reduce((pv, cv) => pv + cv, 0);
+    return sum;
 }
 
 module.exports = {

@@ -23,6 +23,21 @@
 
 function rowWeights(array){
     // Your code here!
+
+    let team1 = [];
+    let team2 = [];
+    let weights = [];
+
+    for (let i = 0; i < array.length; i++ ) {
+        teamMember = array[i];
+        (i % 2) ? team2.push(teamMember) : team1.push(teamMember);
+    }
+
+    weights.push(team1.reduce((pv, cv) => pv + cv, 0));
+    weights.push(team2.reduce((pv, cv) => pv + cv, 0));
+
+    return weights;
+
 }
 
 module.exports = {

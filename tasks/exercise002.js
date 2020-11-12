@@ -4,6 +4,8 @@
 
 function past(h, m, s){
     // Your code here!
+    let ms = (h * 3600000) + (m * 60000) + (s * 1000);
+    return ms;
 }
 
 module.exports = {

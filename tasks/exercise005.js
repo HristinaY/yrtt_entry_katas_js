@@ -21,6 +21,25 @@
 
 function mexicanWave(str){
     // Your code here!
+    let arr = str.split('');
+    let wave = [];
+    
+    for (let i = 0; i < arr.length; i++) {
+        
+        if (arr[i] === ' ') {
+            continue
+        } else {
+            arr[i] = arr[i].toUpperCase();
+
+            let newStr = arr.join('')
+            
+            wave.push(newStr)
+            arr[i] = arr[i].toLowerCase()
+        }
+        
+    }
+
+    return wave
 }
 
 module.exports = {
